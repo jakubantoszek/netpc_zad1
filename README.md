@@ -1,5 +1,5 @@
 # pcnet_zad1
-Zadanie 1. z rektutacji do PCNET
+Zadanie 1. z rektutacji do NETPC
 
 I. OPIS KLAS
 KLASA Contact - zawiera informację na temat użytkownika, które są przesyłane do bazy. Funkcja printOnlyDate zamienia datę z czasem na samą datę, natomiast funkcja printCategory zamienia liczbę oznaczającą kategorię na jej nazwę.
