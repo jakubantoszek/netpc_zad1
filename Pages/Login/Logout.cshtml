@@ -1,0 +1,13 @@
+﻿@page
+@model ContactList.Pages.Login.LogoutModel
+@{
+    ViewData["Title"] = "Logout";
+    HttpContext.Session.Remove("usermail"); // delete session
+    HttpContext.Session.Remove("username");
+    HttpContext.Session.Remove("usersurname");
+}
+
+<br />
+<div class="container row p-0 m-0">
+    <a href="Index">Get back to Login page</a>
+</div>

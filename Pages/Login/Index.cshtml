@@ -1,0 +1,23 @@
+﻿@page
+@model ContactList.Pages.Login.IndexModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="col-10">
+        <h2 class="text-info">Login</h2>
+    </div>
+    <form method="post">
+        <div class="inputField" >
+            E-mail address <input asp-for="Contact.email" type="email" />
+        </div>
+        <div class="inputField">
+            Password <input asp-for="Contact.password" type="password" />
+        </div>
+        <div class="inputField">
+            <input type="submit" value="Login" />
+        </div>
+    </form>
+</div>

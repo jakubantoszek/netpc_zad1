@@ -1,0 +1,60 @@
+﻿@page
+@model ContactList.Pages.Login.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="col-10">
+        <h2 class="text-info">Register</h2>
+    </div>
+    <form name="registerForm" method="post" onsubmit="return registrationValidate();">
+        <div class="inputField">
+            Name <input asp-for="Contact.name" type="text" required />
+        </div>
+        <div class="inputField">
+            Surname <input asp-for="Contact.surname" type="text" required />
+        </div>
+        <div class="inputField">
+            E-mail address <input asp-for="Contact.email" type="email" required />
+        </div>
+        <div class="inputField">
+            Password <input asp-for="Contact.password" type="password" required />
+            </br>
+                  <p style="font-size:10px;">Hasło powinno zawierać co najmniej 8 znaków, w tym duże, małe litery i cyfry.</p>
+        </div>
+        <div class="inputField">
+            Repeat password <input type="password" required />
+        </div>
+        <div class="inputField">
+            Phone number <input asp-for="Contact.phoneNumber" type="text" required />
+        </div>
+        <div class="inputField">
+            Date of birth <input asp-for="Contact.date" type="date" required />
+        </div>
+        <div class="inputField">
+            Category
+            <select asp-for="Contact.category" id="category" onchange="checkCategory();">
+                <option value="1">Private</option>
+                <option value="2">Business</option>
+                <option value="3">Other</option>
+            </select>
+        </div>
+        <div class="inputField" id="subcategory" hidden>
+            Podkategoria
+            <select asp-for="Contact.subcategory">
+                <option value="Boss">Boss</option>
+                <option value="Client">Client</option>
+                <option value="Assistant">Assistant</option>
+                <option value="Employee">Employee</option>
+            </select>
+        </div>
+        <div class="inputField" id="othercategory" hidden>
+            <input asp-for="Contact.subcategory" type="text" placeholder="Subcategory" />
+        </div>
+        <div class="inputField">
+            <input type="submit" value="Register" />
+        </div>
+    </form>
+</div>

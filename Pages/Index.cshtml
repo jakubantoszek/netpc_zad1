@@ -1,0 +1,89 @@
+﻿@page
+@using Microsoft.AspNetCore.Http
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="col-10">
+    <h2 class="text-info">Contacts</h2>
+</div>
+
+<div class="col-12 border p-3 mt-3">
+    @if (@HttpContext.Session.GetString("usermail") != null)
+    {
+        <script>
+            var header = document.getElementsByClassName("nav-item");
+            header[0].innerHTML = "User: @HttpContext.Session.GetString("username") @HttpContext.Session.GetString("usersurname")";
+            header[1].innerHTML = "<a href='/Login/Logout' style='margin-left: 10px; color: #0366d6;'>Logout</a>";
+        </script>
+    }
+
+    @if (Model.Contacts.Count() > 0)
+    {
+        <table class="table table-striped border">
+            <tr class="table-secondary">
+                <th>
+                    Name
+                </th>
+                <th>
+                    Surname
+                </th>
+                <th>
+                    E-mail address
+                </th>
+                @if (@HttpContext.Session.GetString("usermail") != null)
+                {
+                    <th>
+                        Phone number
+                    </th>
+                    <th>
+                        Date of Birth
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Subcategory
+                    </th>
+                }
+            </tr>
+            @foreach(var item in Model.Contacts)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(m => item.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.surname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.email)
+                    </td>
+                    @if (@HttpContext.Session.GetString("usermail") != null)
+                      {
+                        <td>
+                            @Html.DisplayFor(m => item.phoneNumber)
+                        </td>
+                        <td>
+                            @item.printOnlyDate()
+                        </td>
+                        <td>
+                            @item.printCategory()
+                        </td>
+                        <td>
+                            @if (item.category.ToString() != "Private")
+                            {
+                                @Html.DisplayFor(m => item.subcategory)
+                            }
+                        </td>
+                      }
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No contacts available</p>
+    }
+</div>
