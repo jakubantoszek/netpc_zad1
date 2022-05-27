@@ -1,6 +1,6 @@
 # pcnet_zad1
 Zadanie 1. z rektutacji do PCNET
-OPIS KLAS
+**I OPIS KLAS**
 
 KLASA Contact - zawiera informację na temat użytkownika, które są przesyłane do bazy. Funkcja printOnlyDate zamienia datę z czasem na samą datę, natomiast funkcja printCategory zamienia liczbę oznaczającą kategorię na jej nazwę.
 
@@ -18,3 +18,20 @@ KLASA Error - przekazuje użytkownikowi informacje o błędach
 KLASA Privacy - zawiera informację o polityce prywatności
 
 W pliku site.js znajdują się funckje do dynamicznej zmiany wyglądu strony przy formularzu (dodanie dodatkowych opcji dla kategorii Business i Other) oraz funkcje do walidacji formularza rejestracji.
+
+**II WYKORZYSTANE BIBLIOTEKI**
+W programie jest wiele bibliotek, głównie biblioteki System.* i ASP.NET Core'a / Microsoftu. Wszystkie wykorzystywane biblioteki podane są poniżej. Dwie ostatnie służą do generowania hashów.
+System.ComponentModel.DataAnnotations
+System.Collections.Generic
+System.Threading.Tasks
+System.Diagnostics
+Microsoft.EntityFrameworkCore
+Microsoft.Extensions.Configuration
+Microsoft.Extensions.DependencyInjection
+Microsoft.Extensions.Hosting
+Microsoft.Extensions.Logging
+Microsoft.AspNetCore.Mvc
+Microsoft.AspNetCore.Mvc.RazorPages
+Microsoft.AspNetCore.Http
+Microsoft.AspNetCore.Cryptography.KeyDerivation
+System.Security.Cryptography
