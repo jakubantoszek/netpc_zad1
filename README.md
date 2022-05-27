@@ -16,3 +16,5 @@ KLASA Startup - służy do początkowej konfiguracji aplikacji
 KLASA Program - uruchamia aplikację (posiada funkcję Main)
 KLASA Error - przekazuje użytkownikowi informacje o błędach
 KLASA Privacy - zawiera informację o polityce prywatności
+
+W pliku site.js znajdują się funckje do dynamicznej zmiany wyglądu strony przy formularzu (dodanie dodatkowych opcji dla kategorii Business i Other) oraz funkcje do walidacji formularza rejestracji.
