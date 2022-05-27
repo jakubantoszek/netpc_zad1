@@ -12,6 +12,8 @@ KLASA Index - zawiera stronę główną aplikacji.
 W części HTML znajduje się skrypt, który zmienia nagłówek strony, jeżeli użytkownik jest zalogowany. Reszta strony to tabela, która zwraca informacje o wszystkich użytkownikach (lub informację o ich braku w bazie). Jeżeli użytkownik jest zalogowany, wyświetlają się wszystkie informacje o użytkownikach (poza hasłem oczywiście).
 W częsci C# przypisujemy do pól klasy bazę danych i listę kontaktów.
 
+KLASA Logout - wylogowanie się z konta (usunięcie danych sesji)
+
 KLASA Startup - służy do początkowej konfiguracji aplikacji
 KLASA Program - uruchamia aplikację (posiada funkcję Main)
 KLASA Error - przekazuje użytkownikowi informacje o błędach
